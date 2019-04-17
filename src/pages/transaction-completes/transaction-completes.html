@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List of Transactions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="welcome">
+  <ion-card *ngFor="let product of ProductRef">
+<ion-list>
+<ion-item >
+
+  <h2>Name : {{product.Name}}</h2>
+	<h2>Pet Food Order : {{product.PetFoodOrder}}</h2>
+  <h2>Location : {{product.Location}}</h2>
+  <h2>Phone Number : {{product.PhoneNumber}}</h2>
+  <h2>Price : {{product.Price}}</h2>
+  <h2>Quantity : {{product.Quantity}}</h2>
+  <h2>Total Cost : {{product.TotalPrice}}</h2>
+  <h2>Additional Payment : {{product.AdditionalPayment}}</h2>
+  <h2>Date : {{product.Date}}</h2>
+
+</ion-item>
+</ion-list>
+</ion-card>   
+</ion-content>

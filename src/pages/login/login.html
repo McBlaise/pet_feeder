@@ -1,0 +1,38 @@
+
+
+<ion-content padding id="welcome" >
+	<div style="padding-top: 30px;">
+	&nbsp;&nbsp;
+	<ion-card>
+		
+		 
+			<img background-color: transparent src="../assets/imgs/front.png"/>
+		 
+	</ion-card>
+	<strong><h5><div> A Mobile-Based Pet Feeding Application with Arduino-Based Pet Feeder</div></h5></strong>
+	&nbsp;
+
+ 
+	<ion-item >
+    <ion-label color="primary" floating>Username</ion-label>
+    <ion-input [(ngModel)]="Email" placeholder="Email" type="Text"></ion-input>
+  </ion-item>
+  <ion-item  >
+    <ion-label  floating>Password</ion-label>
+     <ion-input [(ngModel)]="Password" placeholder="Password" [type]="passwordType"></ion-input>
+     <button ion-button clear item-end (click)="showHide()" >
+    <ion-icon name="eye" color="primary" style="font-size: 32px;"></ion-icon> 
+   </button>
+  </ion-item>
+ 
+
+
+
+	<div style="padding-top: 60px;">
+		<button ion-button icon start block (click)="login()"><ion-icon name="log-in"></ion-icon> &nbsp;&nbsp;&nbsp; Login</button> &nbsp; 
+ 
+	<button ion-button icon-start block (click)="AddUser()"> <ion-icon name="mail"></ion-icon> &nbsp; Sign Up </button>
+	
+</div>
+</div>
+</ion-content>

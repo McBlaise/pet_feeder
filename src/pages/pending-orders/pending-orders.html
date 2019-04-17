@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pending Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="welcome">
+	<ion-card *ngFor="let orders of AccountRef ">
+<ion-list>
+
+<ion-item  *ngIf="orders.Status=='Pending'" >
+  
+	<h2>Name: {{orders.Name}}</h2>
+	<h2>Location: {{orders.Location}}</h2>
+	<h2>Phone Number: {{orders.MobileNumber}}</h2>
+	<h2>Pet Food: {{orders.PetFoodOrder}}</h2>
+	<h2>Quantity: {{orders.Quantity}}</h2>
+	<button ion-button block (click)="AcceptOrder(orders.Name, orders.Location, orders.MobileNumber, orders.PetFoodOrder, orders.Quantity, orders.key)">Accept Order</button>
+	<button ion-button block >Notify Pet Owner</button>
+	
+	 
+	 
+ 
+</ion-item>
+
+</ion-list>
+</ion-card>
+</ion-content>

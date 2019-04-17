@@ -1,0 +1,44 @@
+
+<ion-header no-border>
+	<ion-navbar transparent>
+		<ion-title> Register Now </ion-title>
+	</ion-navbar>
+</ion-header>		
+
+<ion-content padding center text-center id="welcome">
+
+
+	<ion-card>
+		<ion-card-header>
+			Pet Feeder App
+		</ion-card-header>
+
+			<ion-card-content>
+				<ion-list no-line>
+					<ion-item>
+						<ion-input [(ngModel)]="Username" placeholder="Email" type="text"></ion-input>
+					</ion-item>
+					<ion-item>
+						<ion-input [(ngModel)]="Password" placeholder="Password" type="text"></ion-input>
+					</ion-item>
+					<ion-item>
+						<ion-input [(ngModel)]="Name" placeholder="Name" type="text"></ion-input>
+					</ion-item>
+					<ion-item>
+						Note: Provide exact address including block no. and lot no.
+						<ion-input [(ngModel)]="Address" placeholder="Address" type="text"></ion-input>
+					</ion-item>
+					<ion-item>
+						<ion-input [(ngModel)]="Number" placeholder="Phone Number" type="number"></ion-input>
+					</ion-item>
+
+ 
+				</ion-list>
+
+ <button ion-button icon start block (click)="AddUser()" ><ion-icon name="mail"></ion-icon> &nbsp; Submit</button> 
+			</ion-card-content>
+
+
+	</ion-card>
+
+</ion-content>

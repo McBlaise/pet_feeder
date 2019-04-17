@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Customer Request</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="welcome">
+<ion-list  *ngFor="let accounts of AccountRef" >
+<ion-item  *ngIf="accounts.Account_Approval=='Pending'" >
+ 
+	<h2>Name: {{accounts.Account_Name}}</h2>
+	<h2>Address: {{accounts.Account_Address}}</h2>
+	<h2>Phone Number: {{accounts.Account_Number}}</h2>
+	 
+	<button ion-button block (click)="getkey(accounts.key)">Accept</button>
+	<button ion-button block (click)="declineAccount(accounts.key)">Decline</button>
+	  
+</ion-item>
+
+</ion-list>
+
+</ion-content>

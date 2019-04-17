@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Order Pet Food</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content  padding center text-center id="welcome">
+ 
+				<ion-list no-line>
+					<ion-item>
+						<ion-label floating>Name</ion-label>
+						<ion-input type="text" value={{Uname}}></ion-input>
+					</ion-item>
+					 
+					<ion-item>
+
+						<ion-label floating>Current Location</ion-label>
+						<ion-input type="text" value={{Ulocation}}></ion-input>
+					</ion-item>
+
+					<ion-item>
+
+						<ion-label floating>Mobile Number</ion-label>
+						<ion-input type="number" value={{Umobile}}></ion-input>
+					</ion-item>
+
+ 
+				</ion-list>
+				<br>
+				<br>
+<ion-list radio-group [(ngModel)]="PetfoodOrder">
+<ion-list-header>
+	Choose Pet Food Order
+</ion-list-header>
+
+<ion-scroll scrollY="true" style="height: 220px;">
+
+  <ion-item *ngFor="let product of ProductRef">
+    <ion-label>{{product.Product_Name}}</ion-label>
+    <ion-radio value="{{product.Product_Name}}" ></ion-radio>
+  </ion-item>
+ </ion-scroll>
+
+</ion-list>
+ <button ion-button block  (click)="OrderPetFood()">Place Order</button> 
+		 
+		 
+</ion-content>

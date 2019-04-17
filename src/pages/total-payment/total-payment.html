@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+     
+    <ion-title>Total Payment</ion-title>
+  </ion-navbar>
+</ion-header>
+
+asc
+<ion-content padding id="welcome">
+   <ion-card #map id="map">
+
+   <ion-card>
+    <img src="../assets/imgs/CapstoneLogo.png"/>
+    </ion-card>
+<ion-list>
+
+<ion-item >
+  
+	<h2>Name: {{Name}}</h2>
+	<h2>Location: {{Location}}</h2>
+	<h2>Phone Number: {{PhoneNumber}}</h2>
+	 
+	<h2>Pet Food: {{PetFoodOrder}}</h2>
+	<h2>Price: {{Price}}</h2>
+	<h2>Quantity: {{Quan}}</h2>
+
+</ion-item>
+
+ <ion-item>
+    <ion-label fixed>Total Payment: </ion-label>
+    <ion-input type="text" value="{{Price*1 * Quan*1 }}" readonly></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label fixed>Additional Payment</ion-label>
+    <ion-input type="Number" [(ngModel)]="Additional_Payment"></ion-input>
+  </ion-item>
+	<button ion-button icon start block (click)="Calculate()"><ion-icon name="logo-usd"></ion-icon> &nbsp;&nbsp;&nbsp; Complete Transaction</button> &nbsp; 
+ 
+</ion-list>
+</ion-card>
+</ion-content>

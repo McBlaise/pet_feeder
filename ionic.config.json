@@ -1,0 +1,7 @@
+{
+  "name": "Pet_Feeder",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feeding History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="welcome">
+  <ion-card *ngFor="let product of ProductRef">
+<ion-list >
+<ion-item *ngIf="product.Name==myName">
+
+  <h2>Feeding Amount : {{product.Feeding_Amount}}</h2>
+	<h2>Date Dispense : {{product.Dispense_Date}}</h2>
+	<h2>Time Dispense : {{product.Dispense_Time}}</h2>
+	 &nbsp;
+	   <button ion-button icon-start block (click)="feedDelete(product.key)" ><ion-icon name="trash"> </ion-icon>&nbsp;&nbsp; Delete Feed Log </button>
+</ion-item>
+</ion-list>
+</ion-card>   
+</ion-content>

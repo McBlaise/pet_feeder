@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Product List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding id="welcome">
+  <ion-card *ngFor="let product of ProductRef">
+<ion-list>
+<ion-item >
+	<h2>Product Name: {{product.Product_Name}}</h2>
+  <h2>Product Description: {{product.Product_Description}}</h2>
+	<h2>Product Kilos: {{product.Product_Kilos}}</h2>
+	<h2>Product Price: {{product.Product_Price}}</h2>
+	 
+	<button ion-button icon-start block (click)="UpdateProduct(product.key, product.Product_Name, product.Product_Kilos, product.Product_Price,product.Product_Description)"><ion-icon name="refresh"> </ion-icon>&nbsp;&nbsp; Update </button>
+</ion-item>
+</ion-list>
+</ion-card>
+</ion-content>

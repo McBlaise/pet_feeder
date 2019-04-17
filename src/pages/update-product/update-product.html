@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Update Product</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding center text-center id="welcome">
+<ion-card>
+		<ion-card-header>
+			Pet Feeder App
+		</ion-card-header>
+
+			<ion-card-content>
+				<ion-list no-line>
+					<ion-item>
+						<ion-label floating>Product Name</ion-label>
+						<ion-input [(ngModel)]="PName" type="text" value={{name}}></ion-input>
+					</ion-item>
+					 
+					<ion-item>
+
+						<ion-label floating>Product Description</ion-label>
+						<ion-input [(ngModel)]="PDescription"  type="text"  value={{description}}></ion-input>
+					</ion-item>
+					 
+					<ion-item>
+
+						<ion-label floating>Kilos</ion-label>
+						<ion-input [(ngModel)]="PKilos"  type="number"  value={{kilos}}></ion-input>
+					</ion-item>
+
+					<ion-item>
+
+						<ion-label floating>Price</ion-label>
+						<ion-input [(ngModel)]="PPrice" type="number"  value={{price}}></ion-input>
+					</ion-item>
+
+ 
+				</ion-list>
+
+ <button ion-button block  (click)="updateProduct()">Add Pet Food Product</button> 
+			</ion-card-content>
+
+
+	</ion-card>
+</ion-content>

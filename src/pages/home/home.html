@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="welcome">
+	<ion-card>
+		<img src="../assets/imgs/CapstoneLogo.png"/>
+		</ion-card>
+		<strong><div>Current Pet Food Level: {{foodLevel}}%</div>&nbsp;
+		<div>Current Water Level: {{waterLevel}}L</div>&nbsp;</strong>
+		
+   <button ion-button icon start block (click)="setFeedingHistory()"><ion-icon name="snow"></ion-icon> &nbsp; Dispense Pet Food</button>
+   <button ion-button icon start block (click)="setWaterHistory()"><ion-icon name="color-fill"></ion-icon> &nbsp; &nbsp; Dispense Water</button>
+   <button ion-button icon start block (click)="recordVideo()"><ion-icon name="videocam"></ion-icon> &nbsp; Enable Recording</button>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="clickfacebook()"><ion-icon name="logo-facebook"> </ion-icon></button>
+      <button ion-fab (click)="clicktwitter()"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="clickvimeo()"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab (click)="clickgoogle()"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
